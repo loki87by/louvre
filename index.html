@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="adaptive_L.css" />
+    <link rel="stylesheet" href="adaptive_M.css" />
+    <link rel="stylesheet" href="adaptive_S.css" />
+    <link rel="icon" href="./assets/favicon.ico" />
+    <meta name="author" content="Alexey Akulich" />
+    <title>Museum</title>
+  </head>
+  <body>
+    <header>
+      <div class="container container_header">
+        <div class="logo">
+          <h4 class="logo-title">Louvre</h4>
+        </div>
+        <button type="button" class="mobile-menu-btn"></button>
+        <nav class="navigation">
+          <ul>
+            <li>
+              <a href="#visiting" class="nav__link">visiting</a>
+            </li>
+            <li>
+              <a href="#explore" class="nav__link">explore</a>
+            </li>
+            <li>
+              <a href="#video" class="nav__link">video</a>
+            </li>
+            <li>
+              <a href="#gallery" class="nav__link">gallery</a>
+            </li>
+            <li>
+              <a href="#tickets" class="nav__link">tickets</a>
+            </li>
+            <li>
+              <a href="#contacts" class="nav__link">contacts</a>
+            </li>
+          </ul>
+          <ul class="header__social">
+            <li>
+              <a href="https://www.youtube.com"
+                ><img src="./assets/svg/Youtube.svg" alt="Youtube"
+              /></a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com"
+                ><img src="./assets/svg/Instagram.svg" alt="Instagram"
+              /></a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com"
+                ><img src="./assets/svg/Facebook.svg" alt="Facebook"
+              /></a>
+            </li>
+            <li>
+              <a href="https://www.twitter.com"
+                ><img src="./assets/svg/Twitter.svg" alt="Twitter"
+              /></a>
+            </li>
+            <li>
+              <a href="https://www.pinterest.com"
+                ><img src="./assets/svg/Pinterest.svg" alt="Pinterest"
+              /></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="welcome" id="welcome">
+        <div class="container container_welcome">
+          <div class="welcome__text-container">
+            <h1>Welcome</h1>
+            <h2 class="welcome__title">to the louvre</h2>
+            <h4 class="welcome__subtitle">From the castle to the museum</h4>
+            <a href="./pages/tour.html" target="_blank" class="welcome__btn"
+              >Discover the Louvre</a
+            >
+          </div>
+          <div class="welcome__slider">
+            <div class="welcome__slider-wrapper">
+              <img src="./assets/img/welcome-slider/1.jpg" alt="slider image" />
+              <img src="./assets/img/welcome-slider/2.jpg" alt="slider image" />
+              <img src="./assets/img/welcome-slider/3.jpg" alt="slider image" />
+              <img src="./assets/img/welcome-slider/4.jpg" alt="slider image" />
+              <img src="./assets/img/welcome-slider/5.jpg" alt="slider image" />
+            </div>
+            <div class="welcome__slider-controller">
+              <div class="welcome__slider-text">
+                <p>01</p>
+                <p>&nbsp;|&nbsp;</p>
+                <p>05</p>
+              </div>
+              <div class="welcome__slider-icons">
+                <div
+                  class="welcome__slider-icon welcome__slider-icon_active"
+                ></div>
+                <div class="welcome__slider-icon"></div>
+                <div class="welcome__slider-icon"></div>
+                <div class="welcome__slider-icon"></div>
+                <div class="welcome__slider-icon"></div>
+              </div>
+              <div class="welcome__slider-btns">
+                <img src="assets/svg/arrow-left.svg" alt="to left" />
+                <img src="assets/svg/arrow-right.svg" alt="to right" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="visiting" id="visiting">
+        <div class="container container_visiting">
+          <h2 class="visiting__title">virtual tour</h2>
+          <div class="visiting__container"></div>
+        </div>
+      </section>
+      <section class="explore" id="explore">
+        <div class="container container_explore">
+          <div class="explore__text-container">
+            <h2 class="explore__title">Picture explore</h2>
+            <p class="explore__text">
+              Las Meninas is a 1656 painting by Diego Velázquez, the leading
+              artist of the Spanish Golden Age.
+            </p>
+            <p class="explore__text">
+              It was cleaned in 1984 to remove a <span>"yellow veil"</span> of
+              dust that had gathered since the previous restoration in the 19th
+              century.
+            </p>
+            <p class="explore__text">
+              The cleaning provoked furious protests, not because the picture
+              had been damaged in any way, but because it looked different.
+            </p>
+          </div>
+          <div class="explore__slider">
+            <img
+              class="explore__bottom-image"
+              src="assets/img/explore-slider/after.jpg"
+              alt="picture of velazquez"
+            />
+            <img
+              class="explore__top-image"
+              src="assets/img/explore-slider/before.jpg"
+              alt="picture of velazquez"
+            />
+            <img
+              class="explore__image-slider"
+              src="assets/svg/explore_slider.svg"
+              alt="slide to view filter"
+              draggable="true"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="video" id="video">
+        <div class="container container_video">
+          <div class="video__text-container">
+            <h2 class="video__title">Video journey</h2>
+            <p class="video__text">
+              Enter and visit one of the most famous museums in the world and
+              enjoy masterpieces such as Mona Lisa or Hammurabi's Code
+            </p>
+          </div>
+          <div class="video__cover">
+            <video
+              class="video__player"
+              src="./assets/videos/video0.mp4"
+              poster="./assets/img/video/poster0.jpg"
+              crossorigin="anonymous"
+              id="video-player"
+              preload="metadata"
+            ></video>
+            <button
+              type="button"
+              class="video__controls-btn video__controls-btn_main"
+            >
+              <img src="./assets/svg/play.svg" alt="play" />
+            </button>
+          </div>
+          <div class="video__controls">
+            <button
+              type="button"
+              class="video__controls-btn video__controls-btn_play"
+            ></button>
+            <input
+              type="range"
+              value="0"
+              min="0"
+              max="100"
+              step="1"
+              class="video__length-input"
+            />
+            <button
+              type="button"
+              class="video__controls-btn video__controls-btn_volume"
+            ></button>
+            <input
+              class="video__volume-input"
+              type="range"
+              min="0"
+              max="50"
+              step="1"
+              value="20"
+              title="Громкость"
+            />
+            <button
+              type="button"
+              id="fullscreen-button"
+              class="video__controls-btn"
+            ></button>
+          </div>
+          <div class="video__playlist"></div>
+        </div>
+        <div class="video__pagination">
+          <img
+            class="video__pagination-btn"
+            src="./assets/svg/double-arrow-left.svg"
+            alt="to left"
+          />
+          <div
+            class="video__pagination-item video__pagination-item_active"
+          ></div>
+          <div class="video__pagination-item"></div>
+          <div class="video__pagination-item"></div>
+          <div class="video__pagination-item"></div>
+          <div class="video__pagination-item"></div>
+          <img
+            class="video__pagination-btn"
+            src="./assets/svg/double-arrow-right.svg"
+            alt="to right"
+          />
+        </div>
+      </section>
+      <section id="gallery" class="gallery">
+        <h2 class="gallery__title">Art gallery</h2>
+        <div class="container container_gallery">
+          <div class="gallery-container"></div>
+        </div>
+      </section>
+      <section class="tickets" id="tickets">
+        <div class="container container_tickets">
+          <h2 class="tickets__title">Buy tickets</h2>
+          <img src="./assets/jpg/shield.jpg" alt="shield of Aeneas" />
+          <form class="tickets__form">
+            <fieldset class="tickets__type">
+              <h4 class="tickets__form-title">Ticket Type</h4>
+              <label for="permanent" class="tickets__type-label">
+                <input
+                  type="radio"
+                  name="type"
+                  checked
+                  id="permanent"
+                  value="Permanent exhibition"
+                  class="tickets__type-radio"
+                />
+                Permanent exhibition
+              </label>
+              <label for="temporary" class="tickets__type-label">
+                <input
+                  type="radio"
+                  name="type"
+                  id="temporary"
+                  value="Temporary exhibition"
+                  class="tickets__type-radio"
+                />
+                Temporary exhibition
+              </label>
+              <label for="combined" class="tickets__type-label">
+                <input
+                  type="radio"
+                  name="type"
+                  id="combined"
+                  value="Combined Admission"
+                  class="tickets__type-radio"
+                />
+                Combined Admission
+              </label>
+            </fieldset>
+            <fieldset class="tickets__amount">
+              <h4 class="tickets__form-title">Amount</h4>
+              <div class="tickets__amount-container">
+                <input
+                  type="number"
+                  name="amount"
+                  id="basic"
+                  min="0"
+                  max="100"
+                  value="0"
+                  readonly
+                  class="tickets__amount-input"
+                />
+                <button
+                  type="button"
+                  class="
+                    tickets__amount-input-btn tickets__amount-input-btn_minus
+                  "
+                >
+                  -
+                </button>
+                <button
+                  type="button"
+                  class="
+                    tickets__amount-input-btn tickets__amount-input-btn_plus
+                  "
+                >
+                  +
+                </button>
+                <label for="basic"> Basic 18+ </label>
+              </div>
+              <div class="tickets__amount-container">
+                <input
+                  type="number"
+                  name="amount"
+                  id="senior"
+                  min="0"
+                  max="100"
+                  value="0"
+                  readonly
+                  class="tickets__amount-input"
+                />
+                <button
+                  type="button"
+                  class="
+                    tickets__amount-input-btn tickets__amount-input-btn_minus
+                  "
+                >
+                  -
+                </button>
+                <button
+                  type="button"
+                  class="
+                    tickets__amount-input-btn tickets__amount-input-btn_plus
+                  "
+                >
+                  +
+                </button>
+                <label for="senior"> Senior 65+ </label>
+              </div>
+              <h4 class="tickets__form-title tickets__form-title_total">
+                Total € 0
+              </h4>
+              <button type="button" class="tickets__form-submit">
+                Buy Now
+              </button>
+            </fieldset>
+          </form>
+        </div>
+        <div class="parallax"></div>
+      </section>
+      <section class="contacts" id="contacts">
+        <div class="container container_contacts">
+          <h2 class="contacts__title">Contacts</h2>
+          <div class="contacts__text-container">
+            <h4 class="contacts__text-title">
+              Palais Royal<br />Musee du Louvre
+            </h4>
+            <div class="contacts__list">
+              <p class="contacts__text">address: 75001 Paris, France</p>
+              <a class="contacts__text" href="tel:+330140205050"
+                >phone: +33(0) 1 40 20 50 50</a
+              >
+              <a class="contacts__text" href="mailto:info@louvre.fr"
+                >mail: info@louvre.fr</a
+              >
+            </div>
+          </div>
+          <img src="./assets/png/map.png" alt="map" />
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container container_footer">
+        <div class="logo logo_footer">
+          <h4 class="logo-title">Louvre</h4>
+        </div>
+        <nav>
+          <ul class="footer__nav">
+            <li>
+              <a href="#visiting" class="nav__link">visiting</a>
+            </li>
+            <li>
+              <a href="#explore" class="nav__link">explore</a>
+            </li>
+            <li>
+              <a href="#video" class="nav__link">video</a>
+            </li>
+            <li>
+              <a href="#gallery" class="nav__link">gallery</a>
+            </li>
+            <li>
+              <a href="#tickets" class="nav__link">tickets</a>
+            </li>
+            <li>
+              <a href="#contacts" class="nav__link">contacts</a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="footer__social">
+          <li>
+            <a href="https://www.youtube.com"
+              ><img src="./assets/svg/Youtube.svg" alt="Youtube"
+            /></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com"
+              ><img src="./assets/svg/Instagram.svg" alt="Instagram"
+            /></a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com"
+              ><img src="./assets/svg/Facebook.svg" alt="Facebook"
+            /></a>
+          </li>
+          <li>
+            <a href="https://www.twitter.com"
+              ><img src="./assets/svg/Twitter.svg" alt="Twitter"
+            /></a>
+          </li>
+          <li>
+            <a href="https://www.pinterest.com"
+              ><img src="./assets/svg/Pinterest.svg" alt="Pinterest"
+            /></a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__copyrights">
+        <div style="display: flex">
+          <p>©&nbsp;</p>
+          <time>2021</time>
+        </div>
+        <p>The Rolling Scopes School</p>
+        <p>loki87by</p>
+      </div>
+    </footer>
+    <section class="popup">
+      <div class="popup__container popup__container_tickets">
+        <button class="popup__container-close"></button>
+        <form class="popup__form">
+          <fieldset class="popup__fieldset">
+            <div class="popup__fieldset-header">
+              <h2 class="popup__fieldset-title">Booking tickets</h2>
+              <p class="popup__fieldset-text">Tour to Louvre</p>
+            </div>
+            <div class="popup__fieldset-inputs">
+              <input
+                type="date"
+                id="input-date"
+                class="popup__fieldset-input"
+              />
+              <input
+                type="time"
+                id="input-time"
+                class="popup__fieldset-input"
+              />
+              <input
+                type="text"
+                id="input-name"
+                placeholder="name"
+                class="popup__fieldset-input"
+              />
+              <input
+                type="email"
+                id="input-email"
+                placeholder="email"
+                class="popup__fieldset-input"
+              />
+              <input
+                type="tel"
+                id="input-phone"
+                placeholder="phone"
+                class="popup__fieldset-input"
+              />
+              <select id="input-ticket" class="popup__fieldset-input">
+                <option selected disabled>Ticket type</option>
+                <option>Permanent exhibition</option>
+                <option>Temporary exhibition</option>
+                <option>Combined Admission</option>
+              </select>
+            </div>
+            <div class="popup__fieldset-entry">
+              <p class="popup__fieldset-entry-title">Entry ticket</p>
+              <p class="popup__fieldset-entry-text">Basic 18+ (20 €)</p>
+              <div class="popup__fieldset-entry-counter">
+                <button
+                  type="button"
+                  class="popup__fieldset-entry-counter-button"
+                >
+                  -
+                </button>
+                <p class="popup__fieldset-entry-counter-text">2</p>
+                <button
+                  type="button"
+                  class="popup__fieldset-entry-counter-button"
+                >
+                  +
+                </button>
+              </div>
+              <p class="popup__fieldset-entry-text">Senior 65+ (10 €)</p>
+              <div class="popup__fieldset-entry-counter">
+                <button
+                  type="button"
+                  class="popup__fieldset-entry-counter-button"
+                >
+                  -
+                </button>
+                <p class="popup__fieldset-entry-counter-text">2</p>
+                <button
+                  type="button"
+                  class="popup__fieldset-entry-counter-button"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="popup__fieldset">
+            <div class="popup__fieldset-entry-overview">
+              <h3 class="popup__fieldset-entry-overview-title">Overview</h3>
+              <p class="popup__fieldset-entry-overview-subtitle">
+                Tour to Louvre
+              </p>
+              <div class="popup__fieldset-entry-overview-description">
+                <img
+                  id="calend-icon"
+                  src="./assets/svg/calend.svg"
+                  alt="calend"
+                  class="popup__fieldset-entry-overview-icon"
+                />
+                <p class="popup__fieldset-entry-overview-text">Choose date</p>
+              </div>
+              <div class="popup__fieldset-entry-overview-description">
+                <img
+                  id="time-icon"
+                  src="./assets/svg/oclock.svg"
+                  alt="time"
+                  class="popup__fieldset-entry-overview-icon"
+                />
+                <p class="popup__fieldset-entry-overview-text">Choose time</p>
+              </div>
+              <div class="popup__fieldset-entry-overview-description">
+                <img
+                  id="type-icon"
+                  src="./assets/svg/ticketType.svg"
+                  alt="type"
+                  class="popup__fieldset-entry-overview-icon"
+                />
+                <p class="popup__fieldset-entry-overview-text"></p>
+              </div>
+            </div>
+            <div class="popup__fieldset-entry-coast">
+              <button disabled class="popup__fieldset-entry-coast-count">
+                0
+              </button>
+              <h4 class="popup__fieldset-entry-coast-title">Basic (20 €)</h4>
+              <p
+                class="
+                  popup__fieldset-entry-coast-title
+                  popup__fieldset-entry-coast-text
+                "
+              ></p>
+            </div>
+            <div class="popup__fieldset-entry-coast">
+              <button disabled class="popup__fieldset-entry-coast-count">
+                0
+              </button>
+              <h4 class="popup__fieldset-entry-coast-title">Senior (10 €)</h4>
+              <p
+                class="
+                  popup__fieldset-entry-coast-title
+                  popup__fieldset-entry-coast-text
+                "
+              ></p>
+            </div>
+            <div class="popup__fieldset-entry-total">
+              <h4 class="popup__fieldset-entry-total-title">Total:</h4>
+              <h4
+                class="
+                  popup__fieldset-entry-total-title
+                  popup__fieldset-entry-total-count
+                "
+              >
+                0
+              </h4>
+            </div>
+            <div class="popup__fieldset-cards">
+              <img
+                class="popup__fieldset-card"
+                src="./assets/svg/card-front.svg"
+                alt="card-front"
+              />
+              <input
+                id="input-card"
+                type="number"
+                required
+                class="popup__fieldset-card-input"
+              />
+              <div class="popup__fieldset-card-input popup__fieldset-card-date">
+                <input
+                  id="input-mounth"
+                  type="number"
+                  required
+                  class="popup__fieldset-card-date-input"
+                />
+                <p class="popup__fieldset-card-date-error"></p>
+                <button
+                  type="button"
+                  class="popup__fieldset-card-date-button"
+                ></button>
+                <button
+                  type="button"
+                  class="
+                    popup__fieldset-card-date-button
+                    popup__fieldset-card-date-button_down
+                  "
+                ></button>
+              </div>
+              <div
+                class="
+                  popup__fieldset-card-input
+                  popup__fieldset-card-date
+                  popup__fieldset-card-date_year
+                "
+              >
+                <input
+                  id="input-year"
+                  type="number"
+                  required
+                  class="popup__fieldset-card-date-input"
+                />
+                <p class="popup__fieldset-card-date-error"></p>
+                <button
+                  type="button"
+                  class="popup__fieldset-card-date-button"
+                ></button>
+                <button
+                  type="button"
+                  class="
+                    popup__fieldset-card-date-button
+                    popup__fieldset-card-date-button_down
+                  "
+                ></button>
+              </div>
+              <input
+                id="input-cardholder"
+                type="text"
+                required
+                class="
+                  popup__fieldset-card-input popup__fieldset-card-input_name
+                "
+              />
+              <img
+                class="popup__fieldset-card"
+                src="./assets/svg/card-back.svg"
+                alt="card-back"
+              />
+              <input
+                id="input-cvv"
+                type="number"
+                required
+                class="
+                  popup__fieldset-card-input popup__fieldset-card-input_cvv
+                "
+              />
+            </div>
+            <button type="submit" class="popup__form-submit">Book</button>
+          </fieldset>
+        </form>
+      </div>
+    </section>
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>
