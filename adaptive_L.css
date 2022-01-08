@@ -451,10 +451,9 @@
   }
 
   .popup__container_tickets {
-    height: 770px;
     border-radius: 0;
     width: calc(100vw - 40px);
-    padding: 0 20px;
+    padding: 0;
     max-width: 100vw;
   }
 
@@ -467,25 +466,29 @@
   }
 
   .popup__form {
-    padding: 77px 10px 35px 5px;
-    height: calc(100% - 112px);
+    padding: 47px 10px 15px 5px;
+    height: calc(100% - 62px);
   }
 
   .popup__fieldset-header {
     height: 140px;
-    margin-bottom: 63px;
     border-bottom: 1px solid #3e889e;
     background-size: 80px;
   }
 
   .popup__fieldset-text {
-    margin-bottom: 15px;
     color: #3e889e;
   }
 
   .popup__fieldset-input {
     height: 44px;
-    margin-bottom: 21px;
+    max-height: 6vh;
+    margin-bottom: 1vh;
+  }
+
+  #input-ticket {
+    padding-top: 7px;
+    padding-bottom: 7px;
   }
 
   .popup__fieldset-entry {
@@ -525,8 +528,7 @@
   }
 
   .popup__fieldset:last-of-type {
-    width: 470px;
-    padding: 28px 28px 0;
+    padding: 4px 28px 0;
     padding-left: 10px;
     border-right: 2px solid #000;
     border-bottom: none;
@@ -549,7 +551,6 @@
   .popup__fieldset-card:first-of-type {
     left: -3px;
     margin-top: 3px;
-    width: 77%;
     height: 88%;
   }
 
@@ -571,7 +572,7 @@
 
   .popup__form-submit {
     margin-left: calc(100% - 222px);
-    margin-top: 30px;
+    margin-top: 1vh;
     margin-bottom: 0;
   }
 }

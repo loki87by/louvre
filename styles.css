@@ -330,6 +330,12 @@ button:hover {
   justify-content: space-between;
 }
 
+
+.welcome__slider-icons,
+.welcome__slider-btns {
+  cursor: pointer;
+}
+
 .welcome__slider-icons {
   width: 180px;
 }
@@ -786,6 +792,7 @@ time,
   left: 0;
   top: 0;
   width: 100%;
+  cursor: pointer;
 }
 
 .video__pagination {
@@ -807,6 +814,7 @@ time,
 
 .video__pagination-btn {
   width: 12px;
+  cursor: pointer;
 }
 
 .video__pagination-item {
@@ -1246,7 +1254,8 @@ footer {
 
 .popup__container_tickets {
   width: 970px;
-  height: 665px;
+  height: 90vh;
+  max-height: 665px;
   padding: 90px 235px;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -1265,6 +1274,11 @@ footer {
   background: url("./assets/svg/close.svg");
 }
 
+.popup__container_tickets > .popup__container-close {
+  top: 10px;
+  right: 10px;
+}
+
 .popup__form {
   height: 100%;
   width: 100%;
@@ -1277,11 +1291,11 @@ footer {
 }
 
 .popup__fieldset {
-  width: 400px;
+  width: 45%;
 }
 
 .popup__fieldset:last-of-type {
-  width: 470px;
+  width: 50%;
   padding: 28px 28px 24px;
   border-left: 1px solid #000;
   border-bottom: 1px solid #000;
@@ -1301,8 +1315,8 @@ footer {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
-  font-size: 32px;
-  line-height: 37px;
+  font-size: var(--font2);
+  line-height: 1.3;
   color: #272727;
 }
 
@@ -1311,8 +1325,8 @@ footer {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
-  font-size: 22px;
-  line-height: 26px;
+  font-size: var(--font4);
+  line-height: 1.3;
   color: var(--font-red);
 }
 
@@ -1336,7 +1350,7 @@ footer {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 300;
-  font-size: 18px;
+  font-size: var(--font5);
   line-height: 21px;
   color: var(--bg-dark);
 }
@@ -1380,7 +1394,7 @@ footer {
   font-family: "Roboto";
   font-style: normal;
   font-weight: normal;
-  font-size: 22px;
+  font-size: var(--font4);
   line-height: 26px;
   color: var(--bg-dark);
 }
@@ -1411,7 +1425,7 @@ footer {
   font-family: "Roboto";
   font-style: normal;
   font-weight: normal;
-  font-size: 32px;
+  font-size: var(--font2);
   line-height: 37px;
   color: var(--bg-dark);
 }
@@ -1440,7 +1454,7 @@ footer {
 .popup__fieldset-header {
   width: 100%;
   height: 143px;
-  margin-bottom: 62px;
+  margin-bottom: 2vh;
   border-bottom: 2px solid rgba(86, 193, 208, 0.9);
   background-image: url("./assets/svg/logo.svg");
   background-repeat: no-repeat;
@@ -1454,12 +1468,12 @@ footer {
 }
 
 .popup__fieldset-title {
-  margin: 41px 0 16px;
+  margin: 41px 0 0;
   font-family: "Forum";
   font-style: normal;
   font-weight: normal;
   font-size: 50px;
-  line-height: 55px;
+  line-height: 1.1;
   letter-spacing: 0.1px;
   text-transform: uppercase;
 }
@@ -1607,12 +1621,14 @@ footer {
 .popup__fieldset-cards {
   position: relative;
   width: 100%;
-  height: 240px;
+  height: 25vh;
+  max-height: 240px;
 }
 
 .popup__fieldset-card {
   position: absolute;
-  width: 76.596%;
+  max-width: 77%;
+  height: 88%;
 }
 
 .popup__fieldset-card:first-of-type {
@@ -1625,9 +1641,9 @@ footer {
   position: absolute;
   z-index: 6;
   top: 13%;
-  left: 4.255%;
-  height: 14%;
-  width: 45.745%;
+  left: 10px;
+  max-height: 14%;
+  max-width: 30%;
   padding: 0;
   border: 0;
 }
