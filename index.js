@@ -1,5 +1,5 @@
 import { IMAGES_ARRAY, checkWindowWidth } from "./consts/consts.js";
-import { changeSlide } from "./consts/helpers.js";
+import { changeSlide, getCurrentSlide } from "./consts/helpers.js";
 import createCard from "./components/visiting.js";
 import dragSlider from "./components/explore.js";
 import addGallery from "./components/gallery.js";
@@ -191,6 +191,18 @@ for (let i = 0; i < entryCounter.length; i++) {
       changeTicketCoast();
     }
   });
+}
+
+for (let i=0; i<welcomeSliderIcons.length; i++) {
+  welcomeSliderIcons[i].addEventListener('click', (e) => {
+    getCurrentSlide(e, welcomeSliderData, welcomeSliderIcons, welcomeSlidePosition)
+  })
+}
+
+for (let i=0; i<videoPaginationItems.length; i++) {
+  videoPaginationItems[i].addEventListener('click', (e) => {
+    getCurrentSlide(e, videoSliderData, videoPaginationItems, videoSlidePosition)
+  })
 }
 
 for (let i = 0; i < 2; i++) {

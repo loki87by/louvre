@@ -79,6 +79,27 @@ export function changeSlide(direction, data) {
   }
 }
 
+export function getCurrentSlide(e, data, array, startPosition) {
+  let currentIndex;
+  array.forEach((item, index) => {
+    if(item === e.target) {
+      currentIndex = index + startPosition
+    }
+  })
+  if(currentIndex > data.pos) {
+    let q = currentIndex - data.pos
+    for(let i = 0; i < q; i++) {
+      changeSlide(1, data)
+    }
+  }
+  if(currentIndex < data.pos) {
+    let q = data.pos - currentIndex
+    for(let i = 0; i < q; i++) {
+      changeSlide(0, data)
+    }
+  }
+}
+
 function setExploreSlider() {
   slider.style = `left: ${bottomImage.clientWidth - 300}px`;
   topImage.style = `width: ${bottomImage.clientWidth - 288}px`;
