@@ -1,7 +1,10 @@
 import { createElement } from '../consts/helpers.js'
 import { GALLERY_ARRAY } from '../consts/consts.js'
 
+const gallerySelector = document.getElementById('gallery')
 const pictureContainer = document.querySelector('.gallery-container')
+const visibleHeight = document.documentElement.clientHeight
+//console.dir(window)
 
 function shuffle(array) {
   for (let i = array.length - 1; i > 0; i--) {
@@ -18,8 +21,23 @@ for(let i=0; i<GALLERY_ARRAY.length; i++) {
   const imageData = {
     alt: splitedImageName[splitedImageName.length - 1].replace('.jpg', ''),
     src: GALLERY_ARRAY[i],
-    style: 'margin-bottom: 24px'
+    class: 'gallery-image',
+    style: `transform: translateY(${visibleHeight}px);`
   }
+  /* transition: translate ${1 + +i * +i}s linear ${1 + +i}s */
   createElement('img', imageData, pictureContainer)
 }
+window.addEventListener('scroll', () => {
+  const images = Array.from(document.querySelectorAll('.gallery-image'))
+    if (window.pageYOffset > gallerySelector.offsetTop - document.documentElement.clientHeight / 16 * 7) {
+    images.forEach((i, index) => {
+      i.style.transitionDelay = `${index / images.length}s`
+      i.classList.add('gallery-image_fixedPlace')
+    })
+  } else {
+    images.forEach((i) => {
+      i.classList.remove('gallery-image_fixedPlace')
+    })
+  }
+})
 }

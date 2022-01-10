@@ -863,10 +863,15 @@ time,
   margin: 0;
 }
 
-.gallery-container > img {
+.gallery-image {
   width: 454px;
-  margin-top: 100px;
-  transition: margin 1s ease-in-out;
+  margin-top: 20px;
+  margin-bottom: 24px;
+  transition: all 1s ease-in-out;
+}
+
+.gallery-image_fixedPlace {
+  transform: translateY(0) !important;
 }
 
 .tickets {
