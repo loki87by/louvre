@@ -70,16 +70,14 @@ export const GALLERY_ARRAY = [
 ];
 
 export const checkWindowWidth = (arg, evt) => {
-  const width = Math.max(document.documentElement.clientWidth, window.screen.width);
-  //const playlistWidth = document.querySelector('.video__playlist').clientWidth
-  //console.log(width, playlistWidth)
-  if (evt) {
+  const width = Math.min(document.documentElement.clientWidth, window.screen.width);
+ if (evt) {
     updateElements(arg, width);
   }
   if (width >= 1490) {
     return 494;
   } else if (width > 1024 && width < 1490) {
-    return (width - 84) / 3 + 25;
+    return (width - 127) / 3 + 42;
   } else if (width > 768 && width < 1024) {
     const res = width - 340;
     return res;

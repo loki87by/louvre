@@ -105,6 +105,8 @@ let videoSliderData = {
   limit: 3,
 };
 
+console.log(videoSliderData.shift)
+
 for (let i = 0; i < IMAGES_ARRAY.length; i++) {
   createCard(i, cardSelector);
 }

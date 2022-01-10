@@ -267,7 +267,7 @@
   }
 
   .video__playlist-item {
-    min-width: calc((100vw - 84px) / 3 - 17px);
+    min-width: calc((100% - 84px) / 3);
     height: calc(((100vw - 84px) / 3 - 17px) / 1.8);
   }
 

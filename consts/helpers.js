@@ -123,7 +123,7 @@ export function updateElements(slidePosition, width) {
     resetExploreSlider()
   }
   if (width > 1024 && width < 1490) {
-    const res = -((width - 84) / 3 + 42);
+    const res = -((width - 127) / 3 + 42);
     resizeVideoItem(res * slidePosition);
   }
   if (width > 768 && width < 1024) {
