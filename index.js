@@ -1,5 +1,5 @@
 import { IMAGES_ARRAY, checkWindowWidth } from "./consts/consts.js";
-import { changeSlide, getCurrentSlide } from "./consts/helpers.js";
+import { changeSlide, getCurrentSlide, ticketSelect } from "./consts/helpers.js";
 import createCard from "./components/visiting.js";
 import dragSlider from "./components/explore.js";
 import addGallery from "./components/gallery.js";
@@ -68,6 +68,7 @@ const entryDateButtons = document.querySelectorAll(
 const entryOverviewDescription = document.querySelectorAll(
   ".popup__fieldset-entry-overview-description"
 );
+const ticketTypeSelect = document.getElementById('input-ticket')
 const entryOverviewTicket = entryOverviewDescription[2].children[1];
 const popupSubmit = document.querySelector(".popup__form-submit");
 let welcomeSlidePosition = 1;
@@ -104,8 +105,6 @@ let videoSliderData = {
   shiftUnit: "px",
   limit: 3,
 };
-
-console.log(videoSliderData.shift)
 
 for (let i = 0; i < IMAGES_ARRAY.length; i++) {
   createCard(i, cardSelector);
@@ -173,6 +172,7 @@ for (let i = 0; i < amountTickets.length; i++) {
 for (let i = 0; i < entryCounter.length; i++) {
   const plus = entryCounter[i].children[2];
   const minus = entryCounter[i].children[0];
+  const text = entryCounter[i].children[1];
   const input = amountTickets[i].querySelector(".tickets__amount-input");
   const popupTicketCounter = entryCoasts[i].children[0];
   plus.addEventListener("click", () => {
@@ -181,6 +181,7 @@ for (let i = 0; i < entryCounter.length; i++) {
       value++;
       popupTicketCounter.textContent = value;
       input.value = value;
+      text.textContent = value
       changeTicketCoast();
     }
   });
@@ -190,6 +191,7 @@ for (let i = 0; i < entryCounter.length; i++) {
       value--;
       popupTicketCounter.textContent = value;
       input.value = value;
+      text.textContent = value
       changeTicketCoast();
     }
   });
@@ -279,6 +281,7 @@ closePopupButton.addEventListener("click", () => {
   clearInputs();
 });
 popup.addEventListener("click", checkOverlay);
+ticketTypeSelect.addEventListener('change', ticketSelect)
 dateInput.addEventListener("input", changeDate);
 timeInput.addEventListener("input", changeTime);
 cardInput.addEventListener("input", (e) => {

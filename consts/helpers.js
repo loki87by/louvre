@@ -139,3 +139,13 @@ export function updateElements(slidePosition, width) {
     resizeVideoItem(-res * slidePosition);
   }
 }
+
+export function ticketSelect(e) {
+  const arr = Array.from(e.target.children)
+  const text = document.querySelectorAll('.popup__fieldset-entry-overview-description')[2].children[1]
+  arr.forEach((i) => {
+    if(i.selected === true) {
+      text.textContent = i.textContent
+    }
+  })
+}
