@@ -48,6 +48,7 @@ export function videoChangeTime(e) {
 
 function jumpToTime(back) {
   let interval = 10;
+
   if (back) {
     interval = -interval;
   }
@@ -67,6 +68,7 @@ export function videoMute() {
 export function videoChangeVolume() {
   const volume = volumeScale.value / 50;
   videoPlayer.volume = volume;
+
   if (videoPlayer.volume === 0) {
     muteButton.classList.add("video__controls-btn_mute");
   } else {
@@ -105,9 +107,11 @@ function cancelFullscreen() {
 
 function changVideoSpeed(direction) {
   let step = 0.25;
+
   if (direction) {
     step = step * -1;
   }
+
   if (direction && videoPlayer.playbackRate === 0) {
     return;
   }
@@ -120,6 +124,7 @@ function switchVideo(back) {
     .replace("video", "")
     .replace(".mp4", "");
   let newIndex;
+
   if (!back) {
     if (oldIndex === 4) {
       oldIndex = -1;
@@ -204,6 +209,7 @@ export function keyboardHandler(e) {
   if (e.code === "KeyK") {
     playOrPause();
   }
+
   if (e.code === "Space") {
     e.preventDefault();
     const obj = {};
@@ -211,22 +217,27 @@ export function keyboardHandler(e) {
     keyboardHandler(obj);
     return playOrPause();
   }
+
   if (e.code === "KeyM") {
     e.preventDefault();
     videoMute();
   }
+
   if (e.code === "Comma") {
     e.preventDefault();
     changVideoSpeed(true);
   }
+
   if (e.code === "Period") {
     e.preventDefault();
     changVideoSpeed();
   }
+
   if (e.code === "KeyF") {
     e.preventDefault();
     fullscreenSwitch();
   }
+
   if (e.code === "KeyJ") {
     e.preventDefault();
     jumpToTime();
@@ -235,6 +246,7 @@ export function keyboardHandler(e) {
     e.preventDefault();
     jumpToTime(true);
   }
+
   if (e.key >= 0 && e.key <= 9) {
     e.preventDefault();
     let obj = {};
@@ -242,14 +254,17 @@ export function keyboardHandler(e) {
     obj.target.value = 10 * e.key;
     videoChangeTime(obj);
   }
+
   if (e.code === "KeyN") {
     e.preventDefault();
     switchVideo();
   }
+
   if (e.code === "KeyP") {
     e.preventDefault();
     switchVideo(true);
   }
+
   if (e.code === "Slash" && e.shiftKey) {
     e.preventDefault();
     openPopup();
@@ -308,6 +323,8 @@ export function createPlaylist() {
   playlist.insertBefore(fourthVideoCopy, playlist.children[0]);
 
   for (let i = 0; i < playlist.children.length; i++) {
-    playlist.children[i].style = `transform: translateX(-${checkWindowWidth() * 3}px)`;
+    playlist.children[i].style = `transform: translateX(-${
+      checkWindowWidth() * 3
+    }px)`;
   }
 }

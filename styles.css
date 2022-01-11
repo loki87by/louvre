@@ -174,6 +174,8 @@ main {
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
@@ -270,6 +272,8 @@ button:hover {
 
 .welcome__slider {
   position: relative;
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   height: -webkit-max-content;
   height: -moz-max-content;
@@ -279,8 +283,10 @@ button:hover {
 .welcome__slider-wrapper {
   position: relative;
   width: calc(50vw + 40px);
-    max-width: 1000px;
-    height: max-content;
+  max-width: 1000px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -329,7 +335,6 @@ button:hover {
   -ms-flex-pack: justify;
   justify-content: space-between;
 }
-
 
 .welcome__slider-icons,
 .welcome__slider-btns {
@@ -448,7 +453,8 @@ p,
 li,
 label,
 time,
-.tickets__amount-input {
+.tickets__amount-input,
+.footer__copyrights > a {
   margin: 0;
   font-family: "Roboto";
   font-style: normal;
@@ -543,6 +549,7 @@ time,
   position: absolute;
   top: 0;
   right: -18px;
+  cursor: w-resize;
 }
 
 .video {
@@ -867,10 +874,14 @@ time,
   width: 454px;
   margin-top: 20px;
   margin-bottom: 24px;
+  -webkit-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
 }
 
 .gallery-image_fixedPlace {
+  -webkit-transform: translateY(0) !important;
+  -ms-transform: translateY(0) !important;
   transform: translateY(0) !important;
 }
 
@@ -1039,7 +1050,11 @@ input::-webkit-inner-spin-button {
   -webkit-transform: scale(0.7);
   -ms-transform: scale(0.7);
   transform: scale(0.7);
-}
+} /*
+
+.tickets__amount-input-btn:hover {
+  background-color: transparent;
+} */
 
 .tickets__amount-input-btn_minus {
   left: 14px;
@@ -1225,6 +1240,10 @@ footer {
   letter-spacing: 2px;
 }
 
+.footer__copyrights > a {
+  text-decoration: none;
+}
+
 .popup {
   position: fixed;
   left: -150vw;
@@ -1284,6 +1303,18 @@ footer {
   padding: 0;
   background-size: contain;
   background: url("./assets/svg/close.svg");
+  -webkit-transition: -webkit-transform 0.5s ease-out;
+  transition: -webkit-transform 0.5s ease-out;
+  -o-transition: transform 0.5s ease-out;
+  transition: transform 0.5s ease-out;
+  transition: transform 0.5s ease-out, -webkit-transform 0.5s ease-out;
+}
+
+.popup__container-close:hover {
+  background-color: transparent;
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .popup__container_tickets > .popup__container-close {
@@ -1736,7 +1767,7 @@ footer {
   width: 10%;
 }
 
-.popup__fieldset-card-section:last-of-type > .popup__fieldset-card{
+.popup__fieldset-card-section:last-of-type > .popup__fieldset-card {
   z-index: 4;
   bottom: 0;
   right: 0;

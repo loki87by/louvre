@@ -1,6 +1,6 @@
 @media (max-width: 1023px) {
-  .video__playlist-item{
-    margin-right: calc(100vw - 640px)
+  .video__playlist-item {
+    margin-right: calc(100vw - 640px);
   }
 }
 
@@ -372,7 +372,7 @@
   .container_contacts > img {
     margin-top: 24px;
     width: calc(100vw - 40px);
-    height: calc((100vw - 40px) * .65);
+    height: calc((100vw - 40px) * 0.65);
     -o-object-fit: none;
     object-fit: none;
     -o-object-position: top right;
@@ -534,17 +534,30 @@
     margin-top: 39px;
   }
 
-  .explore__bottom-image{
+  .explore__bottom-image {
     width: calc(100vw - 40px);
   }
 
-  .explore__top-image{
+  .explore__top-image {
     width: calc((100vw - 40px) / 1.7);
   }
 
-  .explore__image-slider{
+  .explore__image-slider {
     left: calc((100vw - 40px) / 1.7 - 18px);
     height: calc((100vw - 40px) / 1.03);
+  }
+
+  .video {
+    padding-bottom: 30px;
+  }
+
+  .video__controls {
+    width: calc(100% - 20px);
+    padding: 6px 10px 0;
+  }
+
+  .video__volume-input {
+    width: 50vw;
   }
 
   .video__playlist-item {

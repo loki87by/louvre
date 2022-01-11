@@ -296,17 +296,13 @@
                 />
                 <button
                   type="button"
-                  class="
-                    tickets__amount-input-btn tickets__amount-input-btn_minus
-                  "
+                  class="tickets__amount-input-btn tickets__amount-input-btn_minus"
                 >
                   -
                 </button>
                 <button
                   type="button"
-                  class="
-                    tickets__amount-input-btn tickets__amount-input-btn_plus
-                  "
+                  class="tickets__amount-input-btn tickets__amount-input-btn_plus"
                 >
                   +
                 </button>
@@ -325,17 +321,13 @@
                 />
                 <button
                   type="button"
-                  class="
-                    tickets__amount-input-btn tickets__amount-input-btn_minus
-                  "
+                  class="tickets__amount-input-btn tickets__amount-input-btn_minus"
                 >
                   -
                 </button>
                 <button
                   type="button"
-                  class="
-                    tickets__amount-input-btn tickets__amount-input-btn_plus
-                  "
+                  class="tickets__amount-input-btn tickets__amount-input-btn_plus"
                 >
                   +
                 </button>
@@ -434,7 +426,7 @@
           <time>2021</time>
         </div>
         <p>The Rolling Scopes School</p>
-        <p>loki87by</p>
+        <a href="https://github.com/loki87by" target="blank">loki87by</a>
       </div>
     </footer>
     <section class="popup">
@@ -558,10 +550,7 @@
               </button>
               <h4 class="popup__fieldset-entry-coast-title">Basic (20 €)</h4>
               <p
-                class="
-                  popup__fieldset-entry-coast-title
-                  popup__fieldset-entry-coast-text
-                "
+                class="popup__fieldset-entry-coast-title popup__fieldset-entry-coast-text"
               ></p>
             </div>
             <div class="popup__fieldset-entry-coast">
@@ -570,106 +559,88 @@
               </button>
               <h4 class="popup__fieldset-entry-coast-title">Senior (10 €)</h4>
               <p
-                class="
-                  popup__fieldset-entry-coast-title
-                  popup__fieldset-entry-coast-text
-                "
+                class="popup__fieldset-entry-coast-title popup__fieldset-entry-coast-text"
               ></p>
             </div>
             <div class="popup__fieldset-entry-total">
               <h4 class="popup__fieldset-entry-total-title">Total:</h4>
               <h4
-                class="
-                  popup__fieldset-entry-total-title
-                  popup__fieldset-entry-total-count
-                "
+                class="popup__fieldset-entry-total-title popup__fieldset-entry-total-count"
               >
                 0
               </h4>
             </div>
             <div class="popup__fieldset-cards">
               <div class="popup__fieldset-card-section">
-              <img
-                class="popup__fieldset-card"
-                src="./assets/svg/card-front.svg"
-                alt="card-front"
-              />
-              <input
-                id="input-card"
-                type="number"
-                required
-                class="popup__fieldset-card-input"
-              />
-              <div class="popup__fieldset-card-input popup__fieldset-card-date">
+                <img
+                  class="popup__fieldset-card"
+                  src="./assets/svg/card-front.svg"
+                  alt="card-front"
+                />
                 <input
-                  id="input-mounth"
+                  id="input-card"
                   type="number"
                   required
-                  class="popup__fieldset-card-date-input"
+                  class="popup__fieldset-card-input"
                 />
-                <p class="popup__fieldset-card-date-error"></p>
-                <button
-                  type="button"
-                  class="popup__fieldset-card-date-button"
-                ></button>
-                <button
-                  type="button"
-                  class="
-                    popup__fieldset-card-date-button
-                    popup__fieldset-card-date-button_down
-                  "
-                ></button>
-              </div>
-              <div
-                class="
-                  popup__fieldset-card-input
-                  popup__fieldset-card-date
-                  popup__fieldset-card-date_year
-                "
-              >
+                <div
+                  class="popup__fieldset-card-input popup__fieldset-card-date"
+                >
+                  <input
+                    id="input-mounth"
+                    type="number"
+                    required
+                    class="popup__fieldset-card-date-input"
+                  />
+                  <p class="popup__fieldset-card-date-error"></p>
+                  <button
+                    type="button"
+                    class="popup__fieldset-card-date-button"
+                  ></button>
+                  <button
+                    type="button"
+                    class="popup__fieldset-card-date-button popup__fieldset-card-date-button_down"
+                  ></button>
+                </div>
+                <div
+                  class="popup__fieldset-card-input popup__fieldset-card-date popup__fieldset-card-date_year"
+                >
+                  <input
+                    id="input-year"
+                    type="number"
+                    required
+                    class="popup__fieldset-card-date-input"
+                  />
+                  <p class="popup__fieldset-card-date-error"></p>
+                  <button
+                    type="button"
+                    class="popup__fieldset-card-date-button"
+                  ></button>
+                  <button
+                    type="button"
+                    class="popup__fieldset-card-date-button popup__fieldset-card-date-button_down"
+                  ></button>
+                </div>
                 <input
-                  id="input-year"
+                  id="input-cardholder"
+                  type="text"
+                  required
+                  class="popup__fieldset-card-input popup__fieldset-card-input_name"
+                />
+              </div>
+              <div class="popup__fieldset-card-section">
+                <img
+                  class="popup__fieldset-card"
+                  src="./assets/svg/card-back.svg"
+                  alt="card-back"
+                />
+                <input
+                  id="input-cvv"
                   type="number"
                   required
-                  class="popup__fieldset-card-date-input"
+                  class="popup__fieldset-card-input popup__fieldset-card-input_cvv"
                 />
-                <p class="popup__fieldset-card-date-error"></p>
-                <button
-                  type="button"
-                  class="popup__fieldset-card-date-button"
-                ></button>
-                <button
-                  type="button"
-                  class="
-                    popup__fieldset-card-date-button
-                    popup__fieldset-card-date-button_down
-                  "
-                ></button>
               </div>
-              <input
-                id="input-cardholder"
-                type="text"
-                required
-                class="
-                  popup__fieldset-card-input popup__fieldset-card-input_name
-                "
-              />
-            </div>
-            <div class="popup__fieldset-card-section">
-              <img
-                class="popup__fieldset-card"
-                src="./assets/svg/card-back.svg"
-                alt="card-back"
-              />
-              <input
-                id="input-cvv"
-                type="number"
-                required
-                class="
-                  popup__fieldset-card-input popup__fieldset-card-input_cvv
-                "
-              />
-            </div>
             </div>
             <button type="submit" class="popup__form-submit">Book</button>
           </fieldset>

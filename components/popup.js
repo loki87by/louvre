@@ -7,6 +7,7 @@ let noSymbolsValue;
 
 export function openPopup() {
   popup.classList.add("popup_opened");
+
   if (entryOverviewTicket.textContent === "") {
     entryOverviewTicket.textContent = "Permanent exhibition";
   }
@@ -72,10 +73,12 @@ export function inputLimiter(event, max, maxValue, minValue) {
   } else {
     noSymbolsValue = event.target.value;
   }
+
   if (event.target.value.length > max) {
     let maxValue = event.target.value.split("").slice(0, max).join("");
     event.target.value = maxValue;
   }
+
   if (event.target.value.length === max) {
     if (+event.target.value > maxValue) {
       event.target.value = maxValue;
@@ -85,6 +88,7 @@ export function inputLimiter(event, max, maxValue, minValue) {
       }, 3000);
     }
   }
+
   if (event.target.value.length === max) {
     if (+event.target.value < minValue) {
       event.target.value = minValue;

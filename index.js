@@ -1,5 +1,9 @@
 import { IMAGES_ARRAY, checkWindowWidth } from "./consts/consts.js";
-import { changeSlide, getCurrentSlide, ticketSelect } from "./consts/helpers.js";
+import {
+  changeSlide,
+  getCurrentSlide,
+  ticketSelect,
+} from "./consts/helpers.js";
 import createCard from "./components/visiting.js";
 import dragSlider from "./components/explore.js";
 import addGallery from "./components/gallery.js";
@@ -68,7 +72,7 @@ const entryDateButtons = document.querySelectorAll(
 const entryOverviewDescription = document.querySelectorAll(
   ".popup__fieldset-entry-overview-description"
 );
-const ticketTypeSelect = document.getElementById('input-ticket')
+const ticketTypeSelect = document.getElementById("input-ticket");
 const entryOverviewTicket = entryOverviewDescription[2].children[1];
 const popupSubmit = document.querySelector(".popup__form-submit");
 let welcomeSlidePosition = 1;
@@ -121,6 +125,8 @@ function changeTicketCoast() {
   popupTotal.textContent = `€${ticketCoastCounter}`;
   entryCoastSum[0].textContent = `${basicInput.value * 20} €`;
   entryCoastSum[1].textContent = `${seniorInput.value * 10} €`;
+  entryCounter[0].children[1].textContent = basicInput.value;
+  entryCounter[1].children[1].textContent = seniorInput.value;
 }
 
 function clearInputs() {
@@ -177,36 +183,48 @@ for (let i = 0; i < entryCounter.length; i++) {
   const popupTicketCounter = entryCoasts[i].children[0];
   plus.addEventListener("click", () => {
     let value = +popupTicketCounter.textContent;
+
     if (value < 20) {
       value++;
       popupTicketCounter.textContent = value;
       input.value = value;
-      text.textContent = value
+      text.textContent = value;
       changeTicketCoast();
     }
   });
   minus.addEventListener("click", () => {
     let value = +popupTicketCounter.textContent;
+
     if (value > 0) {
       value--;
       popupTicketCounter.textContent = value;
       input.value = value;
-      text.textContent = value
+      text.textContent = value;
       changeTicketCoast();
     }
   });
 }
 
-for (let i=0; i<welcomeSliderIcons.length; i++) {
-  welcomeSliderIcons[i].addEventListener('click', (e) => {
-    getCurrentSlide(e, welcomeSliderData, welcomeSliderIcons, welcomeSlidePosition)
-  })
+for (let i = 0; i < welcomeSliderIcons.length; i++) {
+  welcomeSliderIcons[i].addEventListener("click", (e) => {
+    getCurrentSlide(
+      e,
+      welcomeSliderData,
+      welcomeSliderIcons,
+      welcomeSlidePosition
+    );
+  });
 }
 
-for (let i=0; i<videoPaginationItems.length; i++) {
-  videoPaginationItems[i].addEventListener('click', (e) => {
-    getCurrentSlide(e, videoSliderData, videoPaginationItems, videoSlidePosition)
-  })
+for (let i = 0; i < videoPaginationItems.length; i++) {
+  videoPaginationItems[i].addEventListener("click", (e) => {
+    getCurrentSlide(
+      e,
+      videoSliderData,
+      videoPaginationItems,
+      videoSlidePosition
+    );
+  });
 }
 
 for (let i = 0; i < 2; i++) {
@@ -214,7 +232,7 @@ for (let i = 0; i < 2; i++) {
     changeSlide(i, welcomeSliderData);
   });
   videoPaginationBtns[i].addEventListener("click", () => {
-    videoSliderData.shift = checkWindowWidth(videoSliderData.pos)
+    videoSliderData.shift = checkWindowWidth(videoSliderData.pos);
     changeSlide(i, videoSliderData);
   });
 }
@@ -225,6 +243,7 @@ for (let i = 0; i < entryDateButtons.length; i++) {
     const input = parent.children[0];
     let max;
     let min;
+
     if (parent.classList.contains("popup__fieldset-card-date_year")) {
       max = 2026;
       min = 2021;
@@ -232,9 +251,11 @@ for (let i = 0; i < entryDateButtons.length; i++) {
       max = 12;
       min = 1;
     }
+
     if (!input.value) {
       input.value = min - 1;
     }
+
     if (i % 2 === 0) {
       if (+input.value < max) {
         input.value = +input.value + 1;
@@ -267,6 +288,7 @@ muteButton.addEventListener("click", videoMute);
 volumeScale.addEventListener("change", videoChangeVolume);
 fullscreenButton.addEventListener("click", fullscreenSwitch);
 videoPlayer.addEventListener("keypress", keyboardHandler);
+
 for (let i = 0; i < Array.from(radioButton).length; i++) {
   radioButton[i].addEventListener("input", () => {
     ticketType = Array.from(radioButton).find((item) => item.checked).value;
@@ -281,7 +303,7 @@ closePopupButton.addEventListener("click", () => {
   clearInputs();
 });
 popup.addEventListener("click", checkOverlay);
-ticketTypeSelect.addEventListener('change', ticketSelect)
+ticketTypeSelect.addEventListener("change", ticketSelect);
 dateInput.addEventListener("input", changeDate);
 timeInput.addEventListener("input", changeTime);
 cardInput.addEventListener("input", (e) => {
@@ -298,4 +320,6 @@ cvvInput.addEventListener("input", (e) => {
 });
 window.addEventListener("keyup", checkPopupOpened);
 popupSubmit.addEventListener("click", submitForm);
-window.addEventListener("resize", (e) => {checkWindowWidth(videoSliderData.pos, e)});
+window.addEventListener("resize", (e) => {
+  checkWindowWidth(videoSliderData.pos, e);
+});

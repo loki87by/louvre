@@ -356,10 +356,10 @@
   .tickets__amount-container:first-of-type {
     margin-bottom: 25px;
   }
-
+  /*
   .tickets__amount-input-btn {
     padding: 0 0 4px 4px;
-  }
+  } */
 
   .tickets__amount-input-btn_minus {
     left: 14px;
@@ -546,21 +546,21 @@
     padding-top: 10px;
     margin-bottom: 10px;
   }
-/*
+  /*
   .popup__fieldset-card:first-of-type {
     left: -3px;
     margin-top: 3px;
     height: 88%;
   } */
-/*
+  /*
   .popup__fieldset-card-input {
     top: 15%;
   } */
-/*
+  /*
   .popup__fieldset-card-date {
     top: 41%;
   } */
-/*
+  /*
   .popup__fieldset-card-input_name {
     top: 67%;
   } */

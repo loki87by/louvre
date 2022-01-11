@@ -1,8 +1,8 @@
-import { IMAGES_ARRAY, TITLES_ARRAY } from '../consts/consts.js'
-import { createElement } from '../consts/helpers.js'
+import { IMAGES_ARRAY, TITLES_ARRAY } from "../consts/consts.js";
+import { createElement } from "../consts/helpers.js";
 
 export default function createCard(index, selector) {
-  const tourAnchor = TITLES_ARRAY[index].split(' ')[0]
+  const tourAnchor = TITLES_ARRAY[index].split(" ")[0];
   const anchor = createElement(
     "a",
     {
